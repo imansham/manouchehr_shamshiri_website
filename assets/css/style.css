@@ -2043,3 +2043,114 @@ html[dir="rtl"] .leadership-note {
   .commemoration-text p { font-size: 1rem; }
   .commemoration-sub-title { font-size: 1.2rem; }
 }
+/* =====================================================
+   HERITAGE SECTION (میراث + گالری دو عکسی)
+===================================================== */
+.heritage-section {
+  position: relative;
+  padding: 110px 0;
+  background: linear-gradient(180deg, #101010 0%, #0d0d0d 100%);
+  border-top: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+/* گرید دو ستونه */
+.heritage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ===== ستون متن ===== */
+.heritage-text h3 {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.heritage-text p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.heritage-text strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ===== ستون تصاویر ===== */
+.heritage-images {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.heritage-images figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.heritage-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  display: block;
+  transition: transform 0.4s;
+}
+
+.heritage-images img:hover {
+  transform: scale(1.02);
+}
+
+.heritage-images figcaption {
+  padding: 18px 22px;
+  background: rgba(26, 26, 26, 0.6);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.heritage-images figcaption strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* RTL: خط طلایی کپشن بره سمت راست */
+html[dir="rtl"] .heritage-images figcaption {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .heritage-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* در موبایل متن اول بیاد، بعد عکس‌ها */
+  .heritage-text { order: 1; }
+  .heritage-images { order: 2; }
+}
+
+@media (max-width: 600px) {
+  .heritage-section { padding: 70px 0; }
+
+  .heritage-text h3 { font-size: 1.25rem; }
+
+  .heritage-images figcaption {
+    font-size: 0.85rem;
+    padding: 14px 16px;
+  }
+}
