@@ -792,7 +792,7 @@ html[dir="rtl"] .footer-grid ul a:hover {
 .page-hero h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 
 .page-hero h1 span { color: var(--gold); }
